@@ -1,3 +1,4 @@
+import { MessageService } from './services/message.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'popolaTabella';
+  constructor(private restMessage:MessageService){}
 }

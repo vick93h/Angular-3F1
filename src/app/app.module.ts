@@ -3,15 +3,22 @@ import { NgModule } from '@angular/core';
 import{HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TabellaComponent } from './tabella/tabella.component';
+import { FormsModule } from '@angular/forms';
+import { HelloComponent } from './hello/hello.component';
+import { GoodbyeComponent } from './goodbye/goodbye.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TabellaComponent
+    TabellaComponent,
+    HelloComponent,
+    GoodbyeComponent,
+
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
