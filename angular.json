@@ -115,5 +115,8 @@
         }
       }
     }},
-  "defaultProject": "popolaTabella"
+  "defaultProject": "popolaTabella",
+  "cli": {
+    "analytics": "54d824af-40b5-447f-8d69-c2560ac4a636"
+  }
 }
