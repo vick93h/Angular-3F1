@@ -9,8 +9,8 @@ import { RestServiceService } from "../services/rest-service.service";
   styleUrls: ["./tabella.component.css"],
 })
 export class TabellaComponent implements OnInit {
-  title_ng:string;
-  author_ng:string;
+  title_ng!:string;
+  author_ng!:string;
   posts!: post[];
   constructor(private rest: RestServiceService) {}
 

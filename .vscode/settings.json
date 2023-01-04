@@ -2,5 +2,6 @@
   "workbench.colorCustomizations": {
 
   },
-  "workbench.iconTheme": "developer-icon-theme"
+  "workbench.iconTheme": "developer-icon-theme",
+  "angular.enable-strict-mode-prompt": false
 }

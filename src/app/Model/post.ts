@@ -1,6 +1,6 @@
 export class post
 {
- id:number;
+ id!:number;
  title:string;
  author:string;
  constructor(title:string,author:string)
