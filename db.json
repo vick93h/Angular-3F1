@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "Angular Up-Running",
+      "author": "Simona"
+    },
+    {
+      "id": 3,
+      "title": "Java in Action",
+      "author": "Rosaria"
+    },
+    {
+      "id": 4,
+      "title": "Python web stack",
+      "author": "Pietro"
+    }
+  ]
+}
