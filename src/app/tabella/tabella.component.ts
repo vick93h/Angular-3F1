@@ -1,4 +1,4 @@
-import * as fetch from 'node-fetch';
+
 import { Component, OnInit } from "@angular/core";
 import { post } from "../Model/post";
 import { RestServiceService } from "../services/rest-service.service";
