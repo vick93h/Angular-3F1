@@ -1,0 +1,9 @@
+<div>
+  <select id="Selezione">
+    <option *ngFor="let item of post" >
+      <p>(title): {{item.title}} </p>
+      <p>(author): {{item.author}} </p>
+    </option>
+</select>
+<button type="button" (click)="selectSelezione()">Seleziona</button>
+</div>

@@ -1,3 +1,4 @@
+import { areaDati } from './../Model/areaDati';
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { post } from "../Model/post";
@@ -5,7 +6,8 @@ import { post } from "../Model/post";
   providedIn: "root",
 })
 export class RestServiceService {
-  private posts:post[]; //array di post
+  private posts!:post[];//array di post
+  public areaCondivisa:areaDati=new areaDati();
   url: string = " http://localhost:3000/posts";
   intestazione = new HttpHeaders().set("Content-Type", "application/json");
   constructor(private http: HttpClient) {}

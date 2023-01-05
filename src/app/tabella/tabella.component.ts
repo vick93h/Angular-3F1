@@ -9,6 +9,8 @@ import { RestServiceService } from "../services/rest-service.service";
   styleUrls: ["./tabella.component.css"],
 })
 export class TabellaComponent implements OnInit {
+  title_ng!:string;
+  author_ng!:string;
   posts!: post[];
   constructor(private rest: RestServiceService) {}
 
@@ -54,12 +56,11 @@ export class TabellaComponent implements OnInit {
       document.body.appendChild(table);
     });
   }
-  post()
+  async post()
   {
-    var title=document.getElementById("title").nodeValue;
-    console.log(title)
-    var author=document.getElementById("author").nodeValue;
-    var p:post=new post('elettronica','massimo');
-    this.rest.postDati(p).subscribe(()=>{});
+    var title=(<HTMLInputElement>document.getElementById("title")).value
+    var author=(<HTMLInputElement>document.getElementById("author")).value
+    var p:post=new post(title,author);
+    await this.rest.postDati(p).subscribe(()=>{});
   }
 }

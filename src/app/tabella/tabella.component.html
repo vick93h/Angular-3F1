@@ -2,6 +2,13 @@
 <form>
   <input id="title" type="text" placeholder="Inserisci Title">
   <input id="author"type="text" placeholder="Inserisci Author">
-  <button type="submit" onclick="post()">Aggiungi Riga</button>
+  <button type="button" (click)="post()">Aggiungi Riga</button>
 </form>
 </div>
+<!--<div class="form_input">
+<form>
+  <input id="title" type="text" placeholder="Inserisci Title" [(ngModel)]="title_ng" (ngModelChange)="$event.target.value">
+  <input id="author"type="text" placeholder="Inserisci Author"[(ngModel)]="author_ng">
+  <button type="button" (click)="post()">Aggiungi Riga</button>
+</form>
+</div>-->
