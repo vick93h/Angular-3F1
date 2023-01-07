@@ -1,17 +1,9 @@
 <div>
-  <select id="Selezione" #teams (change)="onSelected(teams.value)">
-    <option *ngFor="let item of post">
-      <p>(title): {{ item.title }}</p>
-      <p>(author): {{ item.author }}</p>
+  <select id="Selezione">
+    <option *ngFor="let item of post" >
+      <p>(title): {{item.title}} </p>
+      <p>(author): {{item.author}} </p>
     </option>
-  </select>
+</select>
+<button type="button" (click)="onPremuto()">Seleziona</button>
 </div>
-<!--<div id="comp-render" *ngIf="display">-->
-  <!--<p>You select your team {{ selectedTeam }} using change event</p>
-  <select #teams (change)="onSelected(teams.value)">
-    <option default>Pick a team</option>
-    <option>Lakers</option>
-    <option>Miami</option>
-    <option>Cleveland</option>
-  </select>-->
-

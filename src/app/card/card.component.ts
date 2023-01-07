@@ -1,4 +1,3 @@
-import { RestServiceService } from "./../services/rest-service.service";
 import {
   Component,
   Input,
@@ -12,18 +11,24 @@ import {
   templateUrl: "./card.component.html",
   styleUrls: ["./card.component.css"],
 })
-export class CardComponent implements OnInit {
-  @Input() value: string;
-  constructor(private restService: RestServiceService) {}
-  ngOnInit(): void {
-    this.bufferToggle();
-  }
-
-  bufferToggle() {
+export class CardComponent {
+  value: any;
+@Input() set valueDisplay(value:any){
+if(value!=undefined)
+{
+  this.value=value
+}
+else
+{
+  console.log('undefined!')
+}
+}
+  /*bufferToggle() {
     this.value = this.restService.areaCondivisa.selectValue;
     console.log(this.value);
-  }
-  refresh() {
+  }*/
+  /*refresh() {
     this.bufferToggle();
-  }
+  }*/
+
 }
