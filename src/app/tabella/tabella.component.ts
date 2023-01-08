@@ -21,7 +21,7 @@ export class TabellaComponent implements OnInit {
     this.rest.getDati().subscribe((e: any) => {
       console.log(e);
       this.posts = e;
-      var table = document.createElement("table");
+      /*var table = document.createElement("table");
       var tr = document.createElement('tr');
       var td1 = document.createElement('td');
       var td2 = document.createElement('td');
@@ -53,14 +53,17 @@ export class TabellaComponent implements OnInit {
         table.setAttribute("height", "200px");
         table.setAttribute("align", "center");
       }
-      document.body.appendChild(table);
+      document.body.appendChild(table);*/
     });
   }
   async post()
   {
-    var title=(<HTMLInputElement>document.getElementById("title")).value
-    var author=(<HTMLInputElement>document.getElementById("author")).value
-    var p:post=new post(title,author);
-    await this.rest.postDati(p).subscribe(()=>{});
+   await this.popolaTabella(this.title_ng,this.author_ng);
   }
+  popolaTabella(title,author)
+  {
+    var p:post=new post(title,author);
+    this.rest.postDati(p).subscribe(()=>{});
+  }
+
 }

@@ -38,8 +38,8 @@ constructor(private restService:RestServiceService){//this.pronto=new EventEmitt
   }*/
   onPremuto():void
   {
-    console.log('premuto')
-    var comboboxValue = (<HTMLInputElement>document.getElementById('Selezione')).value;
+    console.log('premuto 2')
+    var comboboxValue = (<HTMLInputElement>document.getElementById('selezione')).value;
     console.log(comboboxValue);
     this.valuePremuto.emit(comboboxValue);
   }

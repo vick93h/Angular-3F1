@@ -4,7 +4,7 @@ import {RestServiceService} from './services/rest-service.service';
 
 @Component({
   selector: 'app-root',
-  template:`<app-select-box (valuePremuto)="displayHandler($event)"></app-select-box> <app-card [valueDisplay]=receivedData></app-card>`,
+  template:` <app-tabella></app-tabella><app-select-box (valuePremuto)="displayHandler($event)"></app-select-box> <app-card [valueDisplay]=receivedData></app-card>`,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {

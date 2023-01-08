@@ -1,9 +1,25 @@
-<div class="form_input">
-<form>
-  <input id="title" type="text" placeholder="Inserisci Title">
-  <input id="author"type="text" placeholder="Inserisci Author">
-  <button type="button" (click)="post()">Aggiungi Riga</button>
+<div class="container" style="width: fit-content">
+<form style="text-align: center">
+  <input id="title" type="text" placeholder="Inserisci Title" [(ngModel)]="title_ng">
+  <input id="author"type="text" placeholder="Inserisci Author"[(ngModel)]="author_ng">
+  <button class="buttonForm" type="button" (click)="post()">Aggiungi Riga</button>
 </form>
+  <table class="table" >
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let variable of posts">
+      <th scope="row">{{variable.id}}</th>
+      <td>{{variable.title}}</td>
+      <td>{{variable.author}}</td>
+    </tr>
+    </tbody>
+  </table>
 </div>
 <!--<div class="form_input">
 <form>
