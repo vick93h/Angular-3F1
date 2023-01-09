@@ -18,10 +18,7 @@ if(value!=undefined)
 {
   this.value=value
 }
-else
-{
-  console.log('undefined!')
-}
+
 }
   /*bufferToggle() {
     this.value = this.restService.areaCondivisa.selectValue;
