@@ -49,6 +49,31 @@
       "title": "machineLearning",
       "author": "Enkk",
       "id": 10
+    },
+    {
+      "title": "intelligenza artificiale",
+      "author": "amoroso",
+      "id": 11
+    },
+    {
+      "title": "cloud computing",
+      "author": "fornaro",
+      "id": 12
+    },
+    {
+      "id": 13,
+      "title": "robotica",
+      "author": "alexander"
+    },
+    {
+      "id": 14,
+      "title": "macchine elettriche",
+      "author": "magistris"
+    },
+    {
+      "id": 15,
+      "title": "circuiti",
+      "author": "paolo"
     }
   ]
 }
