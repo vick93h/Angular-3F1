@@ -8,6 +8,7 @@ import { HelloComponent } from './hello/hello.component';
 import { GoodbyeComponent } from './goodbye/goodbye.component';
 import { CardComponent } from './card/card.component';
 import { SelectBoxComponent } from './select-box/select-box.component';
+import { OperazioniCrudComponent } from './operazioni-crud/operazioni-crud.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SelectBoxComponent } from './select-box/select-box.component';
     GoodbyeComponent,
     CardComponent,
     SelectBoxComponent,
+    OperazioniCrudComponent,
 
   ],
   imports: [
