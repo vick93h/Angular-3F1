@@ -2,13 +2,14 @@ import { areaDati } from './../Model/areaDati';
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { post } from "../Model/post";
+import {persona} from "../Model/persona";
 @Injectable({
   providedIn: "root",
 })
 export class RestServiceService {
   private posts!:post[];//array di post
   public areaCondivisa:areaDati=new areaDati();
-  url: string = " http://localhost:3000/posts";
+  url: string = " http://localhost:3000/persona";
   intestazione = new HttpHeaders().set("Content-Type", "application/json");
   constructor(private http: HttpClient) {}
 
@@ -20,5 +21,10 @@ export class RestServiceService {
 
     return this.http.post(this.url,postItem);
    }
+  insertPersona(person:persona)
+  {
+    return this.http.post(this.url,person); //chiamata Http di tipo post verso il backEnd
+  }
+
 
 }

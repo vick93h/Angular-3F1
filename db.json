@@ -1,84 +1,30 @@
 {
-  "posts": [
+  "persona": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "nome": "vittorio",
+      "cognome": "volpe",
+      "email": "vittoriolavolpe@hot.com",
+      "sesso": "maschio",
+      "avatar": "http:hhhd.com ",
+      "mestiere": "ingegnere"
     },
     {
-      "id": 2,
-      "title": "Angular Up-Running",
-      "author": "Simona"
+      "Id": 2,
+      "Nome": "ttt",
+      "Cognome": "ttt",
+      "Email": "tttt@n.com",
+      "Sesso": "ddd",
+      "Mestiere": "ddd",
+      "id": 2
     },
     {
-      "id": 3,
-      "title": "Java in Action",
-      "author": "Rosaria"
-    },
-    {
-      "id": 4,
-      "title": "Python web stack",
-      "author": "Pietro"
-    },
-    {
-      "title": "sdsd",
-      "author": "sdsd",
-      "id": 5
-    },
-    {
-      "title": "sdsd",
-      "author": "sdsd",
-      "id": 6
-    },
-    {
-      "title": "elettronica",
-      "author": "massimo",
-      "id": 7
-    },
-    {
-      "title": "informatica",
-      "author": "angelo",
-      "id": 8
-    },
-    {
-      "title": "circuiti",
-      "author": "simona",
-      "id": 9
-    },
-    {
-      "title": "machineLearning",
-      "author": "Enkk",
-      "id": 10
-    },
-    {
-      "title": "intelligenza artificiale",
-      "author": "amoroso",
-      "id": 11
-    },
-    {
-      "title": "cloud computing",
-      "author": "fornaro",
-      "id": 12
-    },
-    {
-      "id": 13,
-      "title": "robotica",
-      "author": "alexander"
-    },
-    {
-      "id": 14,
-      "title": "macchine elettriche",
-      "author": "magistris"
-    },
-    {
-      "id": 15,
-      "title": "circuiti",
-      "author": "paolo"
-    },
-    {
-      "id": 16,
-      "title": "elisery",
-      "author": "asdi"
+      "Nome": "pippo",
+      "Cognome": "baudo",
+      "Email": "ssss@pippo.com",
+      "Sesso": "ddd",
+      "Mestiere": "ddd",
+      "id": 3
     }
   ]
 }
