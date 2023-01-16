@@ -8,7 +8,8 @@ import { HelloComponent } from './hello/hello.component';
 import { GoodbyeComponent } from './goodbye/goodbye.component';
 import { CardComponent } from './card/card.component';
 import { SelectBoxComponent } from './select-box/select-box.component';
-import { OperazioniCrudComponent } from './operazioni-crud/operazioni-crud.component';
+import { OperazioniCrudComponent } from './Insert/operazioni-crud.component';
+import {NgxLoadersCssModule} from 'ngx-loaders-css';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { OperazioniCrudComponent } from './operazioni-crud/operazioni-crud.compo
   imports: [
     BrowserModule,
     HttpClientModule,
+    [BrowserModule, NgxLoadersCssModule],
     FormsModule
   ],
   providers: [],

@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
 import {persona} from "../Model/persona";
 import {RestServiceService} from "../services/rest-service.service";
 
 @Component({
-  selector: 'app-operazioni-crud',
+  selector: 'app-Insert',
   templateUrl: './operazioni-crud.component.html',
   styleUrls: ['./operazioni-crud.component.css']
 })
-export class OperazioniCrudComponent {
+export class OperazioniCrudComponent implements AfterViewInit{
+  @ViewChild('modal')refModale;
   p:persona; //oggetto della classe persona
  //////////////////////////////////////////////////////////////
   //i dati che mi arrivano dalla modale tramite ngmodel
@@ -27,4 +28,10 @@ export class OperazioniCrudComponent {
     console.log(this.p);
     this.serviceRest.insertPersona(this.p).subscribe(()=>{});
   }
+
+  ngAfterViewInit(): void {
+console.log("dentro");
+
+  }
+
 }
