@@ -10,6 +10,7 @@ import { CardComponent } from './card/card.component';
 import { SelectBoxComponent } from './select-box/select-box.component';
 import { OperazioniCrudComponent } from './Insert/operazioni-crud.component';
 import {NgxLoadersCssModule} from 'ngx-loaders-css';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import {NgxLoadersCssModule} from 'ngx-loaders-css';
   imports: [
     BrowserModule,
     HttpClientModule,
-    [BrowserModule, NgxLoadersCssModule],
+    [BrowserModule, NgxLoadersCssModule],NgbModule,
     FormsModule
   ],
   providers: [],

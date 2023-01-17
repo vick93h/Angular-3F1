@@ -1,46 +1,36 @@
-<!-- Button trigger modal -->
-<!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Launch static backdrop modal
-</button>-->
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Operazione di Insert</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="input-group flex-nowrap">
-          <span class="input-group-text" id="addon-wrapping1">Nome</span>
-          <input type="text" class="form-control" placeholder="Inserisci il nome" aria-label="Username" aria-describedby="addon-wrapping" [(ngModel)]="nome">
-        </div>
-        <div class="input-group flex-nowrap">
-          <span class="input-group-text" id="addon-wrapping2">Cognome</span>
-          <input type="text" class="form-control" placeholder="Inserisci il cognome" aria-label="Surname" aria-describedby="addon-wrapping"[(ngModel)]="cognome">
-        </div>
-        <div class="input-group flex-nowrap">
-          <span class="input-group-text" id="addon-wrapping3">Email</span>
-          <input type="email" class="form-control" placeholder="Inserisci la mail" aria-label="Email" aria-describedby="addon-wrapping" [(ngModel)]="mail">
-        </div>
-        <div class="input-group flex-nowrap">
-          <span class="input-group-text" id="addon-wrapping4">Sesso</span>
-          <input type="text" class="form-control" placeholder="Inserisci il sesso" aria-label="gender" aria-describedby="addon-wrapping"[(ngModel)]="sesso">
-        </div>
-        <div class="input-group mb-3">
-          <label class="input-group-text" for="inputGroupFile01">Carica avatar</label>
-          <input type="file" class="form-control" id="inputGroupFile01">
-        </div>
-        <div class="input-group flex-nowrap">
-          <span class="input-group-text" id="addon-wrapping5">Mestiere</span>
-          <input type="text" class="form-control" placeholder="Inserisci il mestiere" aria-label="Profession" aria-describedby="addon-wrapping" [(ngModel)]="mestiere">
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="onInsert()">Invio</button>
-      </div>
+<ng-template #modal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Operazione di Inserimento</h4>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping1">Nome</span>
+      <input type="text" class="form-control" placeholder="Inserisci il nome" aria-label="Username" aria-describedby="addon-wrapping" [(ngModel)]="nome">
+    </div>
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping2">Cognome</span>
+      <input type="text" class="form-control" placeholder="Inserisci il cognome" aria-label="Surname" aria-describedby="addon-wrapping"[(ngModel)]="cognome">
+    </div>
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping3">Email</span>
+      <input type="email" class="form-control" placeholder="Inserisci la mail" aria-label="Email" aria-describedby="addon-wrapping" [(ngModel)]="mail">
+    </div>
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping4">Sesso</span>
+      <input type="text" class="form-control" placeholder="Inserisci il sesso" aria-label="gender" aria-describedby="addon-wrapping"[(ngModel)]="sesso">
+    </div>
+    <div class="input-group mb-3">
+      <label class="input-group-text" for="inputGroupFile01">Carica avatar</label>
+      <input type="file" class="form-control" id="inputGroupFile01">
+    </div>
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping5">Mestiere</span>
+      <input type="text" class="form-control" placeholder="Inserisci il mestiere" aria-label="Profession" aria-describedby="addon-wrapping" [(ngModel)]="mestiere">
     </div>
   </div>
-</div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="onInsert()">Salva</button>
+  </div>
+</ng-template>
+
