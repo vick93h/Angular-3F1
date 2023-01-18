@@ -9,6 +9,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class OperazioniCrudComponent implements AfterViewInit {
   @ViewChild('modal') modalRef; //equivale a $('#id') in jquery
+  caricato:boolean=false;
   p: persona; //oggetto della classe persona
   //////////////////////////////////////////////////////////////
   //i dati che mi arrivano dalla modale tramite ngmodel
@@ -27,11 +28,23 @@ export class OperazioniCrudComponent implements AfterViewInit {
   onInsert() {
     this.p = new persona(this.nome, this.cognome, this.mail, this.sesso, this.avatar, this.mestiere);
     console.log(this.p);
+    this.caricato=false;
     this.serviceRest.insertPersona(this.p).subscribe(() => {
     });
   }
+  onExit(m)
+  {
+    this.caricato=false;
+    m.dismiss('Cross click')
+    //this.modalService.dismissAll('Cross click');
+  }
 
   ngAfterViewInit(): void {
-    this.modalService.open(this.modalRef);
+    console.log("sono in ng");
+      this.modalService.open(this.modalRef);
+      this.caricato=true;
+      this.serviceRest.areaCondivisa.sel=this.caricato;
   }
+
+
 }
