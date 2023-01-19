@@ -1,4 +1,4 @@
-<ng-template #modal let-modal>
+<ng-template #modale let-modal>
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">Operazione di Inserimento</h4>
     <!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>-->
@@ -23,7 +23,7 @@
     </div>
     <div class="input-group mb-3">
       <label class="input-group-text" for="inputGroupFile01">Carica avatar</label>
-      <input type="file" class="form-control" id="inputGroupFile01">
+      <input #avatar type="file" class="form-control" id="inputGroupFile01">
     </div>
     <div class="input-group flex-nowrap">
       <span class="input-group-text" id="addon-wrapping5">Mestiere</span>

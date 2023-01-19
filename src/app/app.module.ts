@@ -12,7 +12,8 @@ import { OperazioniCrudComponent } from './Insert/operazioni-crud.component';
 import {NgxLoadersCssModule} from 'ngx-loaders-css';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ListaOpComponent } from './lista-op/lista-op.component';
-
+import { CustomPaginationComponent } from './custom-pagination/custom-pagination.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,12 +24,14 @@ import { ListaOpComponent } from './lista-op/lista-op.component';
     SelectBoxComponent,
     OperazioniCrudComponent,
     ListaOpComponent,
+    CustomPaginationComponent
 
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     [BrowserModule, NgxLoadersCssModule],NgbModule,
+    NgxPaginationModule,
     FormsModule
   ],
   providers: [],

@@ -7,7 +7,7 @@ import {persona} from "../Model/persona";
   providedIn: "root",
 })
 export class RestServiceService {
-  private posts!:post[];//array di post
+  private people!:persona[];//array di persone
   public areaCondivisa:areaDati=new areaDati();
   url: string = " http://localhost:3000/persona";
   intestazione = new HttpHeaders().set("Content-Type", "application/json");

@@ -1,23 +1,32 @@
-<form style="text-align: center">
-  <input id="title" type="text" placeholder="Inserisci Title" [(ngModel)]="title_ng">
-  <input id="author"type="text" placeholder="Inserisci Author"[(ngModel)]="author_ng">
-  <button class="buttonForm" type="button" (click)="post()">Aggiungi Riga</button>
-</form>
-<div class="container" style="width: fit-content">
-  <table class="table" >
+<div class="table-responsive">
+<div class="container" style="width: max-content">
+  <table class="table-hover" >
     <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Title</th>
-      <th scope="col">Author</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Sesso</th>
+      <th scope="col">Avatar</th>
+      <th scope="col">Mestiere</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let variable of posts">
+    <tr *ngFor="let variable of person | paginate: {itemsPerPage: 50, currentPage:page, id: '1'}">
       <th scope="row">{{variable.id}}</th>
-      <td>{{variable.title}}</td>
-      <td>{{variable.author}}</td>
+      <td>{{variable.Nome}}</td>
+      <td>{{variable.Cognome}}</td>
+      <td>{{variable.Email}}</td>
+      <td>{{variable.Sesso}}</td>
+      <td><img src="{{variable.Avatar}}" alt="avatar"></td>
+      <td>{{variable.Mestiere}}</td>
     </tr>
     </tbody>
   </table>
+  <app-custom-pagination (pageChange)="page = $event" id="1"
+                         maxSize="50"
+                         directionLinks="true"
+                         autoHide="true">   </app-custom-pagination>
+</div>
 </div>

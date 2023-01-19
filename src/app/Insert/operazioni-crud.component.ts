@@ -8,7 +8,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./operazioni-crud.component.css']
 })
 export class OperazioniCrudComponent implements AfterViewInit {
-  @ViewChild('modal') modalRef; //equivale a $('#id') in jquery
+  @ViewChild('modale') modalRef; //equivale a $('#id') in jquery
+  @ViewChild('avatar')avatarRef;
   caricato:boolean=false;
   p: persona; //oggetto della classe persona
   //////////////////////////////////////////////////////////////
@@ -22,15 +23,18 @@ export class OperazioniCrudComponent implements AfterViewInit {
 ///////////////////////////////////////////////////////////////
 
   //tramite la code Injection inietto il servizio nella classe op-crud
+  private id: number;
   constructor(private serviceRest: RestServiceService, private modalService: NgbModal) {
   }
 
   onInsert() {
-    this.p = new persona(this.nome, this.cognome, this.mail, this.sesso, this.avatar, this.mestiere);
+    console.log(this.avatarRef.value);
+   /* let id=this.serviceRest.areaCondivisa.arrayPersona.length;
+    this.p = new persona(id+1,this.nome, this.cognome, this.mail, this.sesso, this.avatar, this.mestiere);
     console.log(this.p);
     this.caricato=false;
     this.serviceRest.insertPersona(this.p).subscribe(() => {
-    });
+    });*/
   }
   onExit(m)
   {
