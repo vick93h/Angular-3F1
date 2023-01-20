@@ -6,4 +6,6 @@ export class areaDati{
   sel:boolean=false;
   reference:ElementRef;
   arrayPersona:persona[];
+
+  selectRead:boolean=false;
 }

@@ -26,7 +26,9 @@ export class ListaOpComponent {
   }
 
   Read() {
-    this.leggi=true;
+    this.service.areaCondivisa.selectRead=true;
+    this.leggi=this.service.areaCondivisa.selectRead;
+
   }
 
   Update() {

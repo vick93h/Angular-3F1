@@ -18,10 +18,6 @@ export class RestServiceService {
 
    return this.http.get(this.url);
   }
-  postDati(postItem:post){
-
-    return this.http.post(this.url,postItem);
-   }
   insertPersona(person:persona)
   {
     return this.http.post(this.url,person); //chiamata Http di tipo post verso il backEnd
