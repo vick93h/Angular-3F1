@@ -2701,14 +2701,6 @@
       "id": 300
     },
     {
-      "id": 301,
-      "Nome": "vittorio",
-      "Cognome": "volpe",
-      "Email": "vivkylavolpe@outlook.it",
-      "Sesso": "maschio",
-      "Mestiere": "Ingegnere"
-    },
-    {
       "id": 302,
       "Nome": "giulio",
       "Cognome": "dask",
@@ -2716,9 +2708,6 @@
       "Sesso": "maschio",
       "Avatar": "./assets/image/2017_mansory_ferrari_488_4xx_siracusa-2560x1440.jpg",
       "Mestiere": "lavoratore"
-    },
-    {
-      "id": 303
     }
   ]
 }

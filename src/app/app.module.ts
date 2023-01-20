@@ -15,6 +15,7 @@ import { ListaOpComponent } from './lista-op/lista-op.component';
 import { CustomPaginationComponent } from './custom-pagination/custom-pagination.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { DeleteComponent } from './delete/delete.component';
+import { ReadComponent } from './read/read.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { DeleteComponent } from './delete/delete.component';
     OperazioniCrudComponent,
     ListaOpComponent,
     CustomPaginationComponent,
-    DeleteComponent
+    DeleteComponent,
+    ReadComponent
 
   ],
   imports: [

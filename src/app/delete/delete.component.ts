@@ -19,8 +19,9 @@ export class DeleteComponent implements AfterViewInit{
     m.dismiss('Cross click')
   }
 
-  onInsert(m: any) {
+  onDelete(m: any) {
     this.caricato=false;
+    this.serviceRest.deletePersona(this.id).subscribe(()=>{});
     m.dismiss('Cross click')
   }
 
