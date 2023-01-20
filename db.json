@@ -2707,6 +2707,18 @@
       "Email": "vivkylavolpe@outlook.it",
       "Sesso": "maschio",
       "Mestiere": "Ingegnere"
+    },
+    {
+      "id": 302,
+      "Nome": "giulio",
+      "Cognome": "dask",
+      "Email": "frasco@libero.it",
+      "Sesso": "maschio",
+      "Avatar": "./assets/image/2017_mansory_ferrari_488_4xx_siracusa-2560x1440.jpg",
+      "Mestiere": "lavoratore"
+    },
+    {
+      "id": 303
     }
   ]
 }

@@ -14,6 +14,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ListaOpComponent } from './lista-op/lista-op.component';
 import { CustomPaginationComponent } from './custom-pagination/custom-pagination.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { DeleteComponent } from './delete/delete.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     SelectBoxComponent,
     OperazioniCrudComponent,
     ListaOpComponent,
-    CustomPaginationComponent
+    CustomPaginationComponent,
+    DeleteComponent
 
   ],
   imports: [

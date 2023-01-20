@@ -1,6 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
 import {OperazioniCrudComponent} from '../Insert/operazioni-crud.component';
 import {RestServiceService} from '../services/rest-service.service';
+import {DeleteComponent} from '../delete/delete.component';
 @Component({
   selector: 'app-lista-op',
   templateUrl: './lista-op.component.html',
@@ -8,6 +9,7 @@ import {RestServiceService} from '../services/rest-service.service';
 })
 export class ListaOpComponent {
   @ViewChild(OperazioniCrudComponent)insert!:OperazioniCrudComponent
+  @ViewChild(DeleteComponent)delete!:DeleteComponent
   public inserisci:boolean=false;
   public leggi:boolean=false;
   public aggiorna:boolean=false;
@@ -33,5 +35,9 @@ export class ListaOpComponent {
 
   Delete() {
     this.cancella=true;
+    if(this.service.areaCondivisa.sel==true)
+    {
+      this.delete.ngAfterViewInit();
+    }
   }
 }
