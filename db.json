@@ -2647,24 +2647,6 @@
       "id": 294
     },
     {
-      "Nome": "Bibi",
-      "Cognome": "Longland",
-      "Email": "blongland86@ovh.net",
-      "Sesso": "Female",
-      "Avatar": "https://robohash.org/placeatsapientequod.png?size=300x300&set=set1",
-      "Mestiere": "Marketing Manager",
-      "id": 295
-    },
-    {
-      "Nome": "Devondra",
-      "Cognome": "Beavis",
-      "Email": "dbeavis87@google.co.jp",
-      "Sesso": "Female",
-      "Avatar": "https://robohash.org/molestiaeconsequaturillo.png?size=300x300&set=set1",
-      "Mestiere": "Electrical Engineer",
-      "id": 296
-    },
-    {
       "Nome": "Shanie",
       "Cognome": "Hazeltine",
       "Email": "shazeltine88@slashdot.org",
@@ -2672,42 +2654,6 @@
       "Avatar": "https://robohash.org/eumeaqueblanditiis.png?size=300x300&set=set1",
       "Mestiere": "Editor",
       "id": 297
-    },
-    {
-      "Nome": "Auria",
-      "Cognome": "MacAlinden",
-      "Email": "amacalinden89@vinaora.com",
-      "Sesso": "Female",
-      "Avatar": "https://robohash.org/istevitaeullam.png?size=300x300&set=set1",
-      "Mestiere": "Software Test Engineer IV",
-      "id": 298
-    },
-    {
-      "Nome": "Jeddy",
-      "Cognome": "Fiddy",
-      "Email": "jfiddy8a@blogs.com",
-      "Sesso": "Male",
-      "Avatar": "https://robohash.org/nihilanimidolorum.png?size=300x300&set=set1",
-      "Mestiere": "Help Desk Technician",
-      "id": 299
-    },
-    {
-      "Nome": "Elnar",
-      "Cognome": "Jirousek",
-      "Email": "ejirousek8b@hc360.com",
-      "Sesso": "Male",
-      "Avatar": "https://robohash.org/etfacerenisi.png?size=300x300&set=set1",
-      "Mestiere": "Information Systems Manager",
-      "id": 300
-    },
-    {
-      "id": 302,
-      "Nome": "giulio",
-      "Cognome": "dask",
-      "Email": "frasco@libero.it",
-      "Sesso": "maschio",
-      "Avatar": "./assets/image/2017_mansory_ferrari_488_4xx_siracusa-2560x1440.jpg",
-      "Mestiere": "lavoratore"
     }
   ]
 }

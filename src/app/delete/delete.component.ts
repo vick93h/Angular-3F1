@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {RestServiceService} from '../services/rest-service.service';
+import { TabellaComponent } from '../tabella/tabella.component';
 
 @Component({
   selector: 'app-delete',
@@ -21,7 +22,9 @@ export class DeleteComponent implements AfterViewInit{
 
   onDelete(m: any) {
     this.caricato=false;
-    this.serviceRest.deletePersona(this.id).subscribe(()=>{});
+    this.serviceRest.deletePersona(this.id).subscribe((e:any)=>{
+      this.serviceRest.areaCondivisa.arrayPersona=e;
+    });
     m.dismiss('Cross click')
   }
 

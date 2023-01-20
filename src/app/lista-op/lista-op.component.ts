@@ -2,6 +2,8 @@ import {Component, ViewChild} from '@angular/core';
 import {OperazioniCrudComponent} from '../Insert/operazioni-crud.component';
 import {RestServiceService} from '../services/rest-service.service';
 import {DeleteComponent} from '../delete/delete.component';
+import { ReadComponent } from '../read/read.component';
+import { TabellaComponent } from '../tabella/tabella.component';
 @Component({
   selector: 'app-lista-op',
   templateUrl: './lista-op.component.html',
@@ -10,6 +12,8 @@ import {DeleteComponent} from '../delete/delete.component';
 export class ListaOpComponent {
   @ViewChild(OperazioniCrudComponent)insert!:OperazioniCrudComponent
   @ViewChild(DeleteComponent)delete!:DeleteComponent
+  @ViewChild(ReadComponent)read!:ReadComponent
+  @ViewChild(TabellaComponent)tabella!:TabellaComponent;
   public inserisci:boolean=false;
   public leggi:boolean=false;
   public aggiorna:boolean=false;
@@ -21,15 +25,18 @@ export class ListaOpComponent {
     if(this.service.areaCondivisa.sel==true)
     {
       this.insert.ngAfterViewInit();
+      this.tabella.person=this.service.areaCondivisa.arrayPersona;
     }
 
   }
 
   Read() {
-    this.service.areaCondivisa.selectRead=true;
-    this.leggi=this.service.areaCondivisa.selectRead;
-
+    this.leggi=true;
+    if(this.service.areaCondivisa.selectRead==true){
+    this.read.ngAfterViewInit();
+    this.tabella.person=this.service.areaCondivisa.arrayPersona;
   }
+ }
 
   Update() {
     this.aggiorna=true;
@@ -40,6 +47,7 @@ export class ListaOpComponent {
     if(this.service.areaCondivisa.sel==true)
     {
       this.delete.ngAfterViewInit();
+      this.tabella.person=this.service.areaCondivisa.arrayPersona;
     }
   }
 }
