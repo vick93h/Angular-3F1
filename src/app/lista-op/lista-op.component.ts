@@ -32,7 +32,7 @@ export class ListaOpComponent {
   async Read() {
     this.leggi=true;
     if(this.service.areaCondivisa.selectRead==true){
-    await this.read.read();
+    await this.read.ngAfterViewInit();
   }
  }
 

@@ -2609,6 +2609,24 @@
       "Avatar": "https://robohash.org/aliquamvoluptatemexplicabo.png?size=300x300&set=set1",
       "Mestiere": "Research Assistant IV",
       "id": 291
+    },
+    {
+      "id": 292,
+      "Nome": "giovy",
+      "Cognome": "fask",
+      "Email": "giovyavolpe@outlook.it",
+      "Sesso": "female",
+      "Avatar": "./assets/image/2017_mansory_ferrari_488_4xx_siracusa-2560x1440.jpg",
+      "Mestiere": "Senior Editor"
+    },
+    {
+      "id": 293,
+      "Nome": "filippo",
+      "Cognome": "petito",
+      "Email": "frasco@libero.it",
+      "Sesso": "Male",
+      "Avatar": "./assets/image/2015-Ferrari-FXX-K-V3-1600.jpg",
+      "Mestiere": "Developer"
     }
   ]
 }
