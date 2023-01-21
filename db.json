@@ -1,15 +1,6 @@
 {
   "persona": [
     {
-      "Nome": "Annabell",
-      "Cognome": "Broun",
-      "Email": "abroun0@ca.gov",
-      "Sesso": "Female",
-      "Avatar": "https://robohash.org/sequicupiditatedistinctio.png?size=300x300&set=set1",
-      "Mestiere": "Sales Representative",
-      "id": 1
-    },
-    {
       "Nome": "Ruddie",
       "Cognome": "Giacoppo",
       "Email": "rgiacoppo1@gnu.org",

@@ -20,11 +20,26 @@ export class ReadComponent implements OnInit,AfterViewInit {
 
   ngAfterViewInit(): void {
     console.log("read in after view init")
-    this.read();
+
   }
-  read(){
+  async read(){
     console.log("read....");
-    this.serviceRest.getDati().subscribe((e:any)=>{
+    await this.serviceRest.getDati().subscribe((e:any)=>{
     });
+  }
+
+  onReader(m: any) {
+    console.log("read in reader button")
+    this.read();
+    m.dismiss('Cross click')
+  }
+
+  onExit(m: any) {
+    m.dismiss('Cross click')
+  }
+
+  onRead() {
+    console.log("read in reader button")
+    this.read();
   }
 }

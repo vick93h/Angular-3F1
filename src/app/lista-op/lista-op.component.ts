@@ -20,19 +20,20 @@ export class ListaOpComponent {
   public cancella:boolean=false;
   constructor(private service: RestServiceService) {
   }
-   async Inserted() {
+    Inserted() {
     this.inserisci=true;
     if(this.service.areaCondivisa.sel==true)
     {
-     await this.insert.ngAfterViewInit();
+         this.insert.ngAfterViewInit();
     }
 
   }
 
-  async Read() {
+     Read() {
     this.leggi=true;
     if(this.service.areaCondivisa.selectRead==true){
-    await this.read.ngAfterViewInit();
+      console.log("sono nella read");
+         this.read.ngAfterViewInit();
   }
  }
 
@@ -40,11 +41,11 @@ export class ListaOpComponent {
     this.aggiorna=true;
   }
 
-  async Delete() {
+    Delete() {
     this.cancella=true;
     if(this.service.areaCondivisa.sel==true)
     {
-     await this.delete.ngAfterViewInit();
+         this.delete.ngAfterViewInit();
     }
   }
 }

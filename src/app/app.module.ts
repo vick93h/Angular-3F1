@@ -12,6 +12,9 @@ import { CustomPaginationComponent } from './custom-pagination/custom-pagination
 import { NgxPaginationModule } from 'ngx-pagination';
 import { DeleteComponent } from './delete/delete.component';
 import { ReadComponent } from './read/read.component';
+import { AppRoutesModule } from './app-routes.module';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import { ReadComponent } from './read/read.component';
     ListaOpComponent,
     CustomPaginationComponent,
     DeleteComponent,
-    ReadComponent
+    ReadComponent,
+    ErrorPageComponent,
+    UpdateComponent
 
   ],
   imports: [
@@ -29,7 +34,8 @@ import { ReadComponent } from './read/read.component';
     HttpClientModule,
     [BrowserModule, NgxLoadersCssModule],NgbModule,
     NgxPaginationModule,
-    FormsModule
+    FormsModule,
+    AppRoutesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
