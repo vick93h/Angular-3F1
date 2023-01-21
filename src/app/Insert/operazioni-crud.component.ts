@@ -29,7 +29,7 @@ export class OperazioniCrudComponent implements AfterViewInit {
   }
 
   onInsert(m) {
-    let id=this.serviceRest.areaCondivisa.arrayPersona.length;
+    let id=this.serviceRest.areaCondivisa.arrayPersona[this.serviceRest.areaCondivisa.arrayPersona.length-1].id;
     this.p = new persona(id+1,this.nome, this.cognome, this.mail, this.sesso, this.avatar, this.mestiere);
     console.log(this.p);
     this.caricato=false;
@@ -41,7 +41,6 @@ export class OperazioniCrudComponent implements AfterViewInit {
   {
     this.caricato=false;
     m.dismiss('Cross click')
-    //this.modalService.dismissAll('Cross click');
   }
 
   ngAfterViewInit(): void {
@@ -56,7 +55,7 @@ export class OperazioniCrudComponent implements AfterViewInit {
     const target = event.target as HTMLInputElement;
     if (target.files && target.files.length > 0) {
       this.avatar=target.files[0].name;
-      this.avatar='./assets/image/'+this.avatar;
+      this.avatar='./assets/image/'+this.avatar;//ricavo il nome dell' immagine e concateno la cartella asset per definire il path completo
       console.log(this.avatar);
       console.log(target.files[0].name);
     }

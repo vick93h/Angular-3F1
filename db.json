@@ -2242,15 +2242,6 @@
       "id": 249
     },
     {
-      "Nome": "Ingamar",
-      "Cognome": "Sowte",
-      "Email": "isowte6x@va.gov",
-      "Sesso": "Male",
-      "Avatar": "https://robohash.org/quiamagnamiusto.png?size=300x300&set=set1",
-      "Mestiere": "Account Coordinator",
-      "id": 250
-    },
-    {
       "Nome": "Charlene",
       "Cognome": "Newstead",
       "Email": "cnewstead6y@networksolutions.com",
@@ -2618,42 +2609,6 @@
       "Avatar": "https://robohash.org/aliquamvoluptatemexplicabo.png?size=300x300&set=set1",
       "Mestiere": "Research Assistant IV",
       "id": 291
-    },
-    {
-      "Nome": "Barnebas",
-      "Cognome": "McGeachey",
-      "Email": "bmcgeachey83@mysql.com",
-      "Sesso": "Male",
-      "Avatar": "https://robohash.org/voluptasnumquamiste.png?size=300x300&set=set1",
-      "Mestiere": "Programmer Analyst IV",
-      "id": 292
-    },
-    {
-      "Nome": "Bartholomew",
-      "Cognome": "Stanner",
-      "Email": "bstanner84@shutterfly.com",
-      "Sesso": "Male",
-      "Avatar": "https://robohash.org/quidemnostrumplaceat.png?size=300x300&set=set1",
-      "Mestiere": "Geological Engineer",
-      "id": 293
-    },
-    {
-      "Nome": "Shep",
-      "Cognome": "Masselin",
-      "Email": "smasselin85@technorati.com",
-      "Sesso": "Genderfluid",
-      "Avatar": "https://robohash.org/porrovoluptatumcorrupti.png?size=300x300&set=set1",
-      "Mestiere": "Safety Technician IV",
-      "id": 294
-    },
-    {
-      "Nome": "Shanie",
-      "Cognome": "Hazeltine",
-      "Email": "shazeltine88@slashdot.org",
-      "Sesso": "Female",
-      "Avatar": "https://robohash.org/eumeaqueblanditiis.png?size=300x300&set=set1",
-      "Mestiere": "Editor",
-      "id": 297
     }
   ]
 }

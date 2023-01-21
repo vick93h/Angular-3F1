@@ -20,21 +20,19 @@ export class ListaOpComponent {
   public cancella:boolean=false;
   constructor(private service: RestServiceService) {
   }
-    Inserted() {
+   async Inserted() {
     this.inserisci=true;
     if(this.service.areaCondivisa.sel==true)
     {
-      this.insert.ngAfterViewInit();
-      this.tabella.person=this.service.areaCondivisa.arrayPersona;
+     await this.insert.ngAfterViewInit();
     }
 
   }
 
-  Read() {
+  async Read() {
     this.leggi=true;
     if(this.service.areaCondivisa.selectRead==true){
-    this.read.ngAfterViewInit();
-    this.tabella.person=this.service.areaCondivisa.arrayPersona;
+    await this.read.read();
   }
  }
 
@@ -42,12 +40,11 @@ export class ListaOpComponent {
     this.aggiorna=true;
   }
 
-  Delete() {
+  async Delete() {
     this.cancella=true;
     if(this.service.areaCondivisa.sel==true)
     {
-      this.delete.ngAfterViewInit();
-      this.tabella.person=this.service.areaCondivisa.arrayPersona;
+     await this.delete.ngAfterViewInit();
     }
   }
 }

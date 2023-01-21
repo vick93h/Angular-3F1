@@ -25,7 +25,6 @@ export class ReadComponent implements OnInit,AfterViewInit {
   read(){
     console.log("read....");
     this.serviceRest.getDati().subscribe((e:any)=>{
-    this.serviceRest.areaCondivisa.arrayPersona=e;
     });
   }
 }

@@ -22,9 +22,7 @@ export class DeleteComponent implements AfterViewInit{
 
   onDelete(m: any) {
     this.caricato=false;
-    this.serviceRest.deletePersona(this.id).subscribe((e:any)=>{
-      this.serviceRest.areaCondivisa.arrayPersona=e;
-    });
+    this.serviceRest.deletePersona(this.id).subscribe(()=>{});
     m.dismiss('Cross click')
   }
 

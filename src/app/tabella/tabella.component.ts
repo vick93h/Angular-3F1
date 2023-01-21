@@ -23,7 +23,7 @@ export class TabellaComponent implements OnInit {
         this.rest.getDati().subscribe((e: any) => {
         console.log(e);
         this.person = e;
-        this.rest.areaCondivisa.arrayPersona=e;
+        this.rest.areaCondivisa.arrayPersona=this.person;
     });
   }
 
