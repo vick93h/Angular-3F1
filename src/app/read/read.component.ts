@@ -2,6 +2,7 @@ import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {RestServiceService} from '../services/rest-service.service';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import { TabellaComponent } from '../tabella/tabella.component';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-read',
@@ -10,36 +11,19 @@ import { TabellaComponent } from '../tabella/tabella.component';
 })
 export class ReadComponent implements OnInit,AfterViewInit {
 
-  constructor(private serviceRest: RestServiceService) {
+  constructor(private serviceRest: RestServiceService,private route:Router) {
 
   }
-  @ViewChild(TabellaComponent)tabellaRef:TabellaComponent;
   ngOnInit(): void {
     this.serviceRest.areaCondivisa.selectRead=true;
   }
 
-  ngAfterViewInit(): void {
-    console.log("read in after view init")
-
-  }
-  async read(){
-    console.log("read....");
-    await this.serviceRest.getDati().subscribe((e:any)=>{
+  async ngAfterViewInit(): Promise<void> {
+    this.serviceRest.getDati().subscribe((e:any)=>{
     });
+    await new Promise(f => setTimeout(f, 3000));
+    await this.route.navigate(['Home']);
+
   }
 
-  onReader(m: any) {
-    console.log("read in reader button")
-    this.read();
-    m.dismiss('Cross click')
-  }
-
-  onExit(m: any) {
-    m.dismiss('Cross click')
-  }
-
-  onRead() {
-    console.log("read in reader button")
-    this.read();
-  }
 }

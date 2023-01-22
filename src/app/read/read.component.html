@@ -1,13 +1,10 @@
-<ng-template #modale let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Operazione di Lettura</h4>
-    <!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>-->
-    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="onExit(modal)"></button>
+<div style="text-align: center">
+<div class="container" style="text-align: center">
+  <div class="cookiesContent" id="cookiesPopup">
+    <!--<button class="close">✖</button>-->
+    <img src="./assets/icon/read.png" alt="read-img" />
+    <p>Sto Leggendo i dati dal database....</p>
+    <!--<button class="accept">Letto!</button>-->
   </div>
-  <div class="modal-body">
-    <p style="text-align: center">Ora inizia la lettura del database "Select * from ..."</p>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal" (click)="onReader(modal)">Leggi</button>
-  </div>
-</ng-template>
+</div>
+</div>
