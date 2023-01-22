@@ -1,0 +1,21 @@
+<ng-template #modale let-modal>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Operazione di Cancellazione</h4>
+    <!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>-->
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="onExit(modal)"></button>
+  </div>
+  <div class="modal-body">
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping1">Id</span>
+      <input type="text" class="form-control" placeholder="Inserire Id da Rimuovere" aria-label="Id" aria-describedby="addon-wrapping" [(ngModel)]="id">
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal" (click)="onDelete(modal)">Rimuovi</button>
+  </div>
+    </div>
+  </div>
+</ng-template>
+

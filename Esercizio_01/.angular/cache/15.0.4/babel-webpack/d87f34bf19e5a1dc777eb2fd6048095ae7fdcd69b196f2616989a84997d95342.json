@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { __decorate, __metadata } from \"tslib\";\nimport { Output } from '@angular/core';\nexport class areaDati {\n  constructor() {\n    this.sel = false;\n  }\n}\n__decorate([Output(), __metadata(\"design:type\", Boolean)], areaDati.prototype, \"sel\", void 0);","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

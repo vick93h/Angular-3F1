@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class areaDati {\n  constructor() {\n    this.selectValue = '';\n    this.sel = false;\n    this.scelta = false;\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

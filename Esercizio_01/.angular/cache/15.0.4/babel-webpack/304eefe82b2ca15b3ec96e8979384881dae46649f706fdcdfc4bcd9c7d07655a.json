@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class post {\n  constructor(title, author) {\n    this.title = title;\n    this.author = author;\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
