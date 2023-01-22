@@ -1,7 +1,6 @@
 import { areaDati } from './../Model/areaDati';
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { post } from "../Model/post";
 import {persona} from "../Model/persona";
 @Injectable({
   providedIn: "root",
@@ -28,6 +27,9 @@ export class RestServiceService {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     });
 
+  }
+  updatePersona(id:number){
+    return this.http.put(this.url,id);
   }
 
 

@@ -15,6 +15,7 @@ import { ReadComponent } from './read/read.component';
 import { AppRoutesModule } from './app-routes.module';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { UpdateComponent } from './update/update.component';
+import { ModaleComponent } from './modale/modale.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { UpdateComponent } from './update/update.component';
     DeleteComponent,
     ReadComponent,
     ErrorPageComponent,
-    UpdateComponent
+    UpdateComponent,
+    ModaleComponent
 
   ],
   imports: [

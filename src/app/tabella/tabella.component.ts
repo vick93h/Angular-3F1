@@ -1,6 +1,5 @@
 
 import {AfterViewInit, Component, OnInit} from '@angular/core';
-import { post } from "../Model/post";
 import { RestServiceService } from "../services/rest-service.service";
 import {persona} from '../Model/persona';
 

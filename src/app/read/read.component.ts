@@ -1,7 +1,5 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {RestServiceService} from '../services/rest-service.service';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import { TabellaComponent } from '../tabella/tabella.component';
 import {Router} from '@angular/router';
 
 @Component({

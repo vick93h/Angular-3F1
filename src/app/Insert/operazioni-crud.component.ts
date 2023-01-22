@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./operazioni-crud.component.css']
 })
 export class OperazioniCrudComponent implements AfterViewInit {
-  @ViewChild('modale') modalRef; //equivale a $('#id') in jquery
+  @ViewChild('modale') modalRef:ElementRef<HTMLModElement>; //equivale a $('#id') in jquery
   caricato:boolean=false;
   p: persona; //oggetto della classe persona
   //////////////////////////////////////////////////////////////
@@ -25,7 +25,7 @@ export class OperazioniCrudComponent implements AfterViewInit {
   //tramite la code Injection inietto il servizio nella classe op-crud
   private id: number;
   currentInput: any;
-  constructor(private serviceRest: RestServiceService, private modalService: NgbModal,private route:Router) {
+  constructor(private serviceRest: RestServiceService, private modalService: NgbModal,private route:Router,private elRef:ElementRef) {
 
   }
 
@@ -37,22 +37,24 @@ export class OperazioniCrudComponent implements AfterViewInit {
     this.serviceRest.insertPersona(this.p).subscribe(() => {
     });
     m.dismiss('Cross click')
+    this.modalService.dismissAll();
     await this.route.navigate(['Home']);
   }
   onExit(m)
   {
     this.caricato=false;
     m.dismiss('Cross click')
+    this.modalService.dismissAll();
     this.route.navigate(['Home']);
   }
 
   async ngAfterViewInit(): Promise<void> {
-    console.log("sono in ng");
       await new Promise(f => setTimeout(f, 1000));
       this.modalService.open(this.modalRef);
       this.caricato=true;
       this.serviceRest.areaCondivisa.sel=this.caricato;
   }
+
 
 
   onFileSelected($event: Event) {

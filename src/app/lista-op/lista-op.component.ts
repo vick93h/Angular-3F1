@@ -1,10 +1,11 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, Input, ViewChild} from '@angular/core';
 import {OperazioniCrudComponent} from '../Insert/operazioni-crud.component';
 import {RestServiceService} from '../services/rest-service.service';
 import {DeleteComponent} from '../delete/delete.component';
 import { ReadComponent } from '../read/read.component';
 import { TabellaComponent } from '../tabella/tabella.component';
 import {Router} from '@angular/router';
+import {UpdateComponent} from '../update/update.component';
 @Component({
   selector: 'app-lista-op',
   templateUrl: './lista-op.component.html',
@@ -14,43 +15,41 @@ export class ListaOpComponent {
   @ViewChild(OperazioniCrudComponent)insert!:OperazioniCrudComponent
   @ViewChild(DeleteComponent)delete!:DeleteComponent
   @ViewChild(ReadComponent)read!:ReadComponent
-  @ViewChild(TabellaComponent)tabella!:TabellaComponent;
-  public inserisci:boolean=false;
-  public leggi:boolean=false;
-  public aggiorna:boolean=false;
-  public cancella:boolean=false;
+  @ViewChild(UpdateComponent)update!:UpdateComponent
+  @Input() search: boolean=false;
+
   //code injection per il service e per il routing
   constructor(private service: RestServiceService,private route:Router) {
   }
-    Inserted() {
-    this.inserisci=true;
-    this.route.navigate(['Insert']);
+    async Inserted() {
+    await this.route.navigate(['Insert']);
     if(this.service.areaCondivisa.sel==true)
     {
-         this.insert.ngAfterViewInit();
+         await this.insert.ngAfterViewInit();
     }
 
   }
 
-     Read() {
-    this.leggi=true;
-    this.route.navigate(['Read']);
+     async Read() {
+    await this.route.navigate(['Read']);
     if(this.service.areaCondivisa.selectRead==true){
-      console.log("sono nella read");
-         this.read.ngAfterViewInit();
+        await this.read.ngAfterViewInit();
   }
  }
 
-  Update() {
-    this.aggiorna=true;
-  }
-
-    Delete() {
-    this.cancella=true;
-    this.route.navigate(['Delete']);
+  async Update() {
+    await this.route.navigate(['Update']);
     if(this.service.areaCondivisa.sel==true)
     {
-         this.delete.ngAfterViewInit();
+       await this.update.ngAfterViewInit();
+    }
+  }
+
+    async Delete() {
+    await this.route.navigate(['Delete']);
+    if(this.service.areaCondivisa.sel==true)
+    {
+        await this.delete.ngAfterViewInit();
     }
   }
 }

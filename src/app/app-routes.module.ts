@@ -6,6 +6,8 @@ import {ReadComponent} from './read/read.component';
 import {DeleteComponent} from './delete/delete.component';
 import {RouterModule} from '@angular/router';
 import {ErrorPageComponent} from './error-page/error-page.component';
+import { UpdateComponent } from './update/update.component';
+import { ModaleComponent } from './modale/modale.component';
 
 class Routes {
 }
@@ -16,6 +18,8 @@ const appRoutes: Routes[] = [
   { path: 'Insert', component: OperazioniCrudComponent },
   { path: 'Read', component: ReadComponent },
   { path: 'Delete', component: DeleteComponent },
+  { path: 'Update', component: UpdateComponent },
+  {path:'UpdatePhase',component: ModaleComponent},
   {path:'**',component:ErrorPageComponent}
 
 ];
