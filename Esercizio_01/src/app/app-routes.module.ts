@@ -18,8 +18,11 @@ const appRoutes: Routes[] = [
   { path: 'Insert', component: OperazioniCrudComponent },
   { path: 'Read', component: ReadComponent },
   { path: 'Delete', component: DeleteComponent },
-  { path: 'Update', component: UpdateComponent },
-  {path:'UpdatePhase',component: ModaleComponent},
+  { path: 'Update', component: UpdateComponent ,
+    children: [
+      { path:'UpdatePhase',component: ModaleComponent }
+    ]
+  },
   {path:'**',component:ErrorPageComponent}
 
 ];
