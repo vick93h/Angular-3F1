@@ -8,6 +8,7 @@ import {RouterModule} from '@angular/router';
 import {ErrorPageComponent} from './error-page/error-page.component';
 import { UpdateComponent } from './update/update.component';
 import { ModaleComponent } from './modale/modale.component';
+import { AuthGuardComponent } from './auth-guard/auth-guard.component';
 
 class Routes {
 }
@@ -15,15 +16,12 @@ class Routes {
 const appRoutes: Routes[] = [
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
   { path: 'Home', component: ListaOpComponent },
-  { path: 'Insert', component: OperazioniCrudComponent },
+  { path: 'Insert', component: OperazioniCrudComponent},
   { path: 'Read', component: ReadComponent },
-  { path: 'Delete', component: DeleteComponent },
-  { path: 'Update', component: UpdateComponent ,
-    children: [
-      { path:'UpdatePhase',component: ModaleComponent }
-    ]
-  },
-  {path:'**',component:ErrorPageComponent}
+  { path: 'Delete', component: DeleteComponent},
+  { path: 'Update', component: UpdateComponent},
+  { path:'UpdatePhase',component: ModaleComponent },
+  {path:'**',component:ErrorPageComponent},
 
 ];
 

@@ -3,7 +3,8 @@ import {RestServiceService} from '../services/rest-service.service';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {Router} from '@angular/router';
 import { persona } from '../Model/persona';
-
+import { Modal } from 'flowbite'
+import type { ModalOptions, ModalInterface } from 'flowbite'
 
 @Component({
   selector: 'app-modale',
@@ -21,17 +22,36 @@ export class ModaleComponent implements OnInit, AfterViewInit{
   avatar!: string;
   currentInput!:string;
   p:persona;
+
   constructor(private serviceRest: RestServiceService, private modalService: NgbModal,private route:Router,private elRef:ElementRef) {
     this.id=this.serviceRest.areaCondivisa.id;
   }
 
       ngOnInit(){
+        const $modalElement: HTMLElement = document.querySelector('#modalEl');
+        const modalOptions: ModalOptions = {
+          placement: 'bottom-right',
+          backdrop: 'dynamic',
+          backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
+          onHide: () => {
+              console.log('modal is hidden');
+          },
+          onShow: () => {
+              console.log('modal is shown');
+          },
+          onToggle: () => {
+              console.log('modal has been toggled');
+          }
+      }
+
+      const modal: ModalInterface = new Modal($modalElement, modalOptions);
+
+      modal.show();
      this.serviceRest.getDatiById(this.id).subscribe((data:any) => {this.p=data;
      console.log(this.p);});
     }
-  async onExit(modal: any) {
-    modal.dismiss('Cross click')
-    this.modalService.dismissAll();
+  async onExit() {
+
    await  this.route.navigate(['Update']);
   }
   onFileSelected($event:Event){
@@ -42,7 +62,7 @@ export class ModaleComponent implements OnInit, AfterViewInit{
 
     }
   }
-  async onInsert(modal: any) {
+  async onInsert() {
 
     await  this.route.navigate(['Home']);
   }
