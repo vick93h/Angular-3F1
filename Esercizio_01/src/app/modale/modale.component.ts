@@ -20,14 +20,14 @@ export class ModaleComponent implements OnInit, AfterViewInit{
   mestiere!: string;
   avatar!: string;
   currentInput!:string;
-  p:persona[];
+  p:persona;
   constructor(private serviceRest: RestServiceService, private modalService: NgbModal,private route:Router,private elRef:ElementRef) {
     this.id=this.serviceRest.areaCondivisa.id;
   }
 
-  async ngOnInit():Promise<void> {
-    await this.serviceRest.getDatiById(this.id).subscribe((data:any) => {this.p=data;
-    console.log(this.p);});
+      ngOnInit(){
+     this.serviceRest.getDatiById(this.id).subscribe((data:any) => {this.p=data;
+     console.log(this.p);});
     }
   async onExit(modal: any) {
     modal.dismiss('Cross click')
@@ -48,7 +48,12 @@ export class ModaleComponent implements OnInit, AfterViewInit{
   }
   async ngAfterViewInit(): Promise<void> {
   await new Promise(f => setTimeout(f, 1000));
-
+    this.nome=this.p.Nome;
+    this.cognome=this.p.Cognome;
+    this.mail=this.p.Email;
+    this.sesso=this.p.Sesso;
+    this.avatar=this.p.Avatar;
+    this.mestiere=this.p.Mestiere;
   }
 
 }
