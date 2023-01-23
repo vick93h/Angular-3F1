@@ -25,10 +25,12 @@ export class UpdateComponent implements OnInit,AfterViewInit  {
 
   }
   async ngAfterViewInit(): Promise<void> {
+
+
+  }
+  async ngOnInit(): Promise<void> {
     await new Promise(f => setTimeout(f, 1000));
     this.modalService.open(this.modalRef);
-  }
-  ngOnInit(): void {
     this.serviceRest.areaCondivisa.sel=true;
   }
 
@@ -40,10 +42,10 @@ export class UpdateComponent implements OnInit,AfterViewInit  {
   }
 
   async onInsert(modal: any) {
+    this.serviceRest.areaCondivisa.id=this.id;
     modal.dismiss('Cross click');
     this.modalService.dismissAll();
     await new Promise(f => setTimeout(f, 500));
     await this.route.navigate(['UpdatePhase']);
-    //await this.route.navigate(['Home']);
   }
 }

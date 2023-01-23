@@ -17,6 +17,9 @@ export class RestServiceService {
 
    return this.http.get(this.url);
   }
+  getDatiById(id:number){
+    return this.http.get(`http://localhost:3000/persona/${id}`,{ headers: new HttpHeaders({ 'Content-Type': 'application/json' })});
+  }
   insertPersona(person:persona)
   {
     return this.http.post(this.url,person); //chiamata Http di tipo post verso il backEnd
@@ -29,8 +32,10 @@ export class RestServiceService {
 
   }
   updatePersona(id:number){
-    return this.http.put(this.url,id);
+    const url = `http://localhost:3000/persona/${id}`;
+    return this.http.put(url,{
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  });
   }
-
 
 }

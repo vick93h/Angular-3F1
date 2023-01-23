@@ -5,7 +5,7 @@ export class areaDati{
   sel:boolean=false;
 
   arrayPersona:persona[];
-
+  id:number;
   selectRead:boolean=false;
   selectUpdate:boolean=false;
 }
