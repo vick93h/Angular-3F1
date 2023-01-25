@@ -31,9 +31,9 @@ export class RestServiceService {
     });
 
   }
-  updatePersona(id:number){
+  updatePersona(id:number,person:persona){
     const url = `http://localhost:3000/persona/${id}`;
-    return this.http.put(url,{
+    return this.http.put(url,person,{
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   });
   }

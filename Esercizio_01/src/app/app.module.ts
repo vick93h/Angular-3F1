@@ -16,7 +16,6 @@ import { AppRoutesModule } from './app-routes.module';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { UpdateComponent } from './update/update.component';
 import { ModaleComponent } from './modale/modale.component';
-import { AuthGuardComponent } from './auth-guard/auth-guard.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,6 @@ import { AuthGuardComponent } from './auth-guard/auth-guard.component';
     ErrorPageComponent,
     UpdateComponent,
     ModaleComponent,
-    AuthGuardComponent
 
   ],
   imports: [

@@ -1,22 +1,13 @@
 {
   "persona": [
     {
+      "id": 2,
       "Nome": "Ruddie",
       "Cognome": "Giacoppo",
       "Email": "rgiacoppo1@gnu.org",
       "Sesso": "Male",
       "Avatar": "https://robohash.org/teneturvoluptasanimi.png?size=300x300&set=set1",
-      "Mestiere": "Staff Scientist",
-      "id": 2
-    },
-    {
-      "Nome": "Klemens",
-      "Cognome": "Ovington",
-      "Email": "kovington2@ca.gov",
-      "Sesso": "Male",
-      "Avatar": "https://robohash.org/dolorsintcorrupti.png?size=300x300&set=set1",
-      "Mestiere": "Physical Therapy Assistant",
-      "id": 3
+      "Mestiere": "Staff Scientist"
     },
     {
       "Nome": "Alleyn",

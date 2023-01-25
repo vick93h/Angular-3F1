@@ -1,1 +1,0 @@
-{"ast":null,"code":"export class persona {\n  constructor(id, nome, cognome, email, sesso, avatar, mestiere) {\n    this.id = id;\n    this.Nome = nome;\n    this.Cognome = cognome;\n    this.Email = email;\n    this.Sesso = sesso;\n    this.Avatar = avatar;\n    this.Mestiere = mestiere;\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

@@ -4,11 +4,11 @@ import {ListaOpComponent} from './lista-op/lista-op.component';
 import {OperazioniCrudComponent} from './Insert/operazioni-crud.component';
 import {ReadComponent} from './read/read.component';
 import {DeleteComponent} from './delete/delete.component';
-import {RouterModule} from '@angular/router';
+import { RouterModule, CanActivate } from '@angular/router';
 import {ErrorPageComponent} from './error-page/error-page.component';
 import { UpdateComponent } from './update/update.component';
 import { ModaleComponent } from './modale/modale.component';
-import { AuthGuardComponent } from './auth-guard/auth-guard.component';
+import { AuthGuardGuard } from './auth-guard/auth-guard.guard';
 
 class Routes {
 }
@@ -16,7 +16,7 @@ class Routes {
 const appRoutes: Routes[] = [
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
   { path: 'Home', component: ListaOpComponent },
-  { path: 'Insert', component: OperazioniCrudComponent},
+  { path: 'Insert', component: OperazioniCrudComponent,CanActivate:[AuthGuardGuard]},
   { path: 'Read', component: ReadComponent },
   { path: 'Delete', component: DeleteComponent},
   { path: 'Update', component: UpdateComponent},

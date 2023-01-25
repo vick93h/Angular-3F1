@@ -22,7 +22,7 @@ export class ModaleComponent implements OnInit, AfterViewInit{
   avatar!: string;
   currentInput!:string;
   p:persona;
-
+  temp:persona;
   constructor(private serviceRest: RestServiceService, private modalService: NgbModal,private route:Router,private elRef:ElementRef) {
     this.id=this.serviceRest.areaCondivisa.id;
   }
@@ -63,11 +63,12 @@ export class ModaleComponent implements OnInit, AfterViewInit{
     }
   }
   async onInsert() {
-
+    this.temp = new persona(this.id, this.nome, this.cognome, this.mail, this.sesso, this.avatar,this.mestiere);
+    await this.serviceRest.updatePersona(this.id, this.temp).subscribe(()=>{});
     await  this.route.navigate(['Home']);
   }
   async ngAfterViewInit(): Promise<void> {
-  await new Promise(f => setTimeout(f, 1000));
+  await new Promise(f => setTimeout(f, 200));
     this.nome=this.p.Nome;
     this.cognome=this.p.Cognome;
     this.mail=this.p.Email;
