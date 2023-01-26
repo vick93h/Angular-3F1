@@ -51,7 +51,7 @@ export class ModaleComponent implements OnInit, AfterViewInit{
      console.log(this.p);});
     }
   async onExit() {
-
+   await new Promise(f => setTimeout(f, 200));
    await  this.route.navigate(['Update']);
   }
   onFileSelected($event:Event){
@@ -63,9 +63,23 @@ export class ModaleComponent implements OnInit, AfterViewInit{
     }
   }
   async onInsert() {
-    this.temp = new persona(this.id, this.nome, this.cognome, this.mail, this.sesso, this.avatar,this.mestiere);
+    const $inputElementName: HTMLInputElement = document.querySelector('#first_name');
+    this.nome=$inputElementName.value;
+    const $inputElementSurname: HTMLInputElement = document.querySelector('#sur_name');
+    this.cognome=$inputElementSurname.value;
+    const $inputElementMail: HTMLInputElement = document.querySelector('#email');
+    this.mail=$inputElementMail.value;
+    const $inputElementGender: HTMLInputElement = document.querySelector('#gender');
+    this.sesso=$inputElementGender.value;
+    const $inputElementAvatar: HTMLInputElement = document.querySelector('#file_input');
+    this.avatar=$inputElementAvatar.value;
+    const $inputElementMestiere: HTMLInputElement = document.querySelector('#mestiere');
+    this.mestiere=$inputElementMestiere.value;
+    this.temp = new persona(+this.id, this.nome, this.cognome, this.mail, this.sesso, this.avatar,this.mestiere);
+    console.log(this.temp);
     await this.serviceRest.updatePersona(this.id, this.temp).subscribe(()=>{});
-    await  this.route.navigate(['Home']);
+    await new Promise(f => setTimeout(f, 200));
+    await  this.route.navigate(['']);
   }
   async ngAfterViewInit(): Promise<void> {
   await new Promise(f => setTimeout(f, 200));
