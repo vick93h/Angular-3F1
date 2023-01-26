@@ -34,10 +34,10 @@ export class OperazioniCrudComponent implements AfterViewInit {
     this.p = new persona(id+1,this.nome, this.cognome, this.mail, this.sesso, this.avatar, this.mestiere);
     console.log(this.p);
     this.caricato=false;
-    this.serviceRest.insertPersona(this.p).subscribe(() => {
+    await this.serviceRest.insertPersona(this.p).subscribe(() => {
     });
-    m.dismiss('Cross click')
-    this.modalService.dismissAll();
+    m.dismiss('Cross click')//metodo che chiude la modale tal .ts
+    this.modalService.dismissAll();//metodo per pulire la modale ad ogni chiusura
     await this.route.navigate(['Home']);
   }
   onExit(m)
@@ -49,14 +49,14 @@ export class OperazioniCrudComponent implements AfterViewInit {
   }
 
   async ngAfterViewInit(): Promise<void> {
-      await new Promise(f => setTimeout(f, 1000));
+      await new Promise(f => setTimeout(f, 1000));//serve a sincronizzare meglio a mio avviso la gestione dei task
       this.modalService.open(this.modalRef);
       this.caricato=true;
       this.serviceRest.areaCondivisa.sel=this.caricato;
   }
 
 
-
+//metodo che prende il path dell'immagine.
   onFileSelected($event: Event) {
     const target = event.target as HTMLInputElement;
     if (target.files && target.files.length > 0) {

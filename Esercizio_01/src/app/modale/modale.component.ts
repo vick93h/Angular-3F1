@@ -28,6 +28,7 @@ export class ModaleComponent implements OnInit, AfterViewInit{
   }
 
       ngOnInit(){
+        //di seguito il codice per aprire da .ts la modale con tailwind
         const $modalElement: HTMLElement = document.querySelector('#modalEl');
         const modalOptions: ModalOptions = {
           placement: 'bottom-right',
@@ -62,6 +63,7 @@ export class ModaleComponent implements OnInit, AfterViewInit{
 
     }
   }
+  //implementa La PUT
   async onInsert() {
     const $inputElementName: HTMLInputElement = document.querySelector('#first_name');
     this.nome=$inputElementName.value;
@@ -81,6 +83,7 @@ export class ModaleComponent implements OnInit, AfterViewInit{
     await new Promise(f => setTimeout(f, 200));
     await  this.route.navigate(['']);
   }
+  //carico la modale con i valori già presenti in db
   async ngAfterViewInit(): Promise<void> {
   await new Promise(f => setTimeout(f, 200));
     this.nome=this.p.Nome;

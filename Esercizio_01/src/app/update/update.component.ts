@@ -30,7 +30,7 @@ export class UpdateComponent implements OnInit,AfterViewInit  {
   }
   async ngOnInit(): Promise<void> {
     await new Promise(f => setTimeout(f, 1000));
-    this.modalService.open(this.modalRef);
+    this.modalService.open(this.modalRef);//apre la modale dal .ts
     this.serviceRest.areaCondivisa.sel=true;
   }
 
