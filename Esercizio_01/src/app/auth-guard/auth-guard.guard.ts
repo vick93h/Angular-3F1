@@ -12,8 +12,8 @@ export class AuthGuardGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean>|Promise<boolean>|boolean {
       // If the previous URL was blank, then the user is directly accessing this page
-      if (this.router.url === '/Insert') {
-        this.router.navigate(['Home']); // Navigate away to some other page
+      if (this.router.url == '/Insert') {
+        this.router.navigate(['Home']);
         return false;
       }
       return true;

@@ -15,12 +15,12 @@ class Routes {
 //definisco le rotte
 const appRoutes: Routes[] = [
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
-  { path: 'Home', component: ListaOpComponent },
+  { path: 'Home', component: ListaOpComponent,CanActivate:[AuthGuardGuard]},
   { path: 'Insert', component: OperazioniCrudComponent,CanActivate:[AuthGuardGuard]},
-  { path: 'Read', component: ReadComponent },
-  { path: 'Delete', component: DeleteComponent},
-  { path: 'Update', component: UpdateComponent},
-  { path:'UpdatePhase',component: ModaleComponent },
+  { path: 'Read', component: ReadComponent,CanActivate:[AuthGuardGuard]},
+  { path: 'Delete', component: DeleteComponent,CanActivate:[AuthGuardGuard]},
+  { path: 'Update', component: UpdateComponent,CanActivate:[AuthGuardGuard]},
+  { path:'UpdatePhase',component: ModaleComponent,CanActivate:[AuthGuardGuard]},
   {path:'**',component:ErrorPageComponent},
 
 ];
